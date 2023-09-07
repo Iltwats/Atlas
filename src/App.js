@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Country Search App</h1>
+      <h1>Country Atlas</h1>
       <Search onSearch={handleSearch} />
       {filteredCountries.length === 0 ? (
         <div className="no-results">No Results Found</div>
