@@ -14,6 +14,7 @@ const Search = ({ onSearch }) => {
                 placeholder="Search for a country..."
                 value={query}
                 onChange={handleChange}
+                className="search-input"
             />
         </div>
     );
