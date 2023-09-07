@@ -2,78 +2,90 @@
   text-align: center;
 }
 
-/* src/App.css */
-
-/* Styles for the search bar */
 .search {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
 
-
-/* Styles for country cards and grid layout */
 .country-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
-  gap: 20px; /* Gap between cards */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
   padding: 0 20px;
 }
 
 .country-card {
   border: 1px solid #ddd;
-  border-radius: 10px; /* Round corners */
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  background-color: #ffc;
+  background-color: rgb(255, 227, 227);
   transition: transform 0.3s ease-in-out;
+  display: grid;
+  margin: 4px;
+  grid-template-columns: 1fr;
 }
 
 .country-card:hover {
   transform: scale(1.02);
 }
 
-.country-card h3{
-  margin: 0;
+.country-card h3 {
+  margin: 4px;
   padding: 0;
 }
-.country-card p{
+.country-card p {
   margin: 2px;
   padding: 2px;
 }
 
+.country-info {
+  display: flex-box;
+  gap: 10px;
+  text-transform: capitalize;
+}
+
+.country-flag-div {
+  grid-row: 1;
+  grid-column: 1 / -1;
+  justify-content: center;
+  max-height: 210px;
+  overflow: hidden;
+  max-width: auto;
+  background-color: white;
+}
+
 .country-flag {
-  width: 50%;
-  border-radius: 10px;
-  height: auto; /* Automatically adjust the height to maintain the aspect ratio */
-  display: block; /* Ensure proper spacing and alignment */
-  margin: 10px auto; 
+  border-radius: 4px;
+  max-width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .country-demographics {
   display: flex;
   margin-bottom: 2px;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .country-demographics p {
   width: 100%;
   display: inline;
-  padding: 12px; 
+  padding: 12px;
   border: #666 1px solid;
 }
 
-.country-divi{
+.country-divi {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 10px;
 }
 
-.country-divi p{
+.country-divi p {
   border: #666 1px solid;
-
 }
-/* Styles for "No Results Found" message */
+
 .no-results {
   text-align: center;
   font-size: 18px;

@@ -17,18 +17,20 @@ const CountryCard = ({ country , onClick}) => {
             <div className="country-flag-div">
                 <img src={country.flags.png} alt={country.flags.alt} className="country-flag" />
             </div>
-            <div className="country-about">
-                <h3>{country.name.common}</h3>
-                <p> {country.continents}</p>
-            </div>
-            <p>Capital: {country.capital}</p>
-            {languageStrings.length > 0 && (
-                <p>Languages: {languageStrings.join(', ')}</p>
-            )}
-            <p> Currency:{currencyStrings}</p>
-            <div className="country-demographics">
-                <p>{country.population}<br/>Population</p>
-                <p>{country.area} km²<br/> Area</p>
+            <div className="country-info">
+                <div className="country-about">
+                    <h3>{country.name.common}</h3>
+                    <p> {country.continents}</p>
+                </div>
+                <p>Capital: {country.capital}</p>
+                {languageStrings.length > 0 && (
+                    <p>Lang: {languageStrings.join(', ')}</p>
+                )}
+                <p> Currency:{currencyStrings}</p>
+                <div className="country-demographics">
+                    <p>{country.population}<br/>Population</p>
+                    <p>{country.area} km²<br/> Area</p>
+                </div>
             </div>
         </div>
     );
