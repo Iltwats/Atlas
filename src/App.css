@@ -2,37 +2,81 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* src/App.css */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Styles for the search bar */
+.search {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Styles for country cards and grid layout */
+.country-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Gap between cards */
+  padding: 0 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.country-card {
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Round corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #ffc;
+  transition: transform 0.3s ease-in-out;
+}
+
+.country-card:hover {
+  transform: scale(1.02);
+}
+
+.country-card h3{
+  margin: 0;
+  padding: 0;
+}
+.country-card p{
+  margin: 2px;
+  padding: 2px;
+}
+
+.country-flag {
+  width: 50%;
+  border-radius: 10px;
+  height: auto; /* Automatically adjust the height to maintain the aspect ratio */
+  display: block; /* Ensure proper spacing and alignment */
+  margin: 10px auto; 
+}
+
+.country-demographics {
+  display: flex;
+  margin-bottom: 2px;
+  justify-content: center;
+}
+
+.country-demographics p {
+  width: 100%;
+  display: inline;
+  padding: 12px; 
+  border: #666 1px solid;
+}
+
+.country-divi{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.country-divi p{
+  border: #666 1px solid;
+
+}
+/* Styles for "No Results Found" message */
+.no-results {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+  color: #666;
 }
